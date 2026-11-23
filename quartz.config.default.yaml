@@ -3,7 +3,7 @@ configuration:
   pageTitle: Earthly Journey
   pageTitleSuffix: " | Библиотека знаний"
   enableSPA: true
-  enablePopovers: true
+  enablePopovers: false
   prefetch: viewport
   analytics:
     provider: null
