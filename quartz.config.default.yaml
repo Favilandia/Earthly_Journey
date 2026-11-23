@@ -183,18 +183,26 @@ plugins:
       priority: 5
       condition: not-index
   - source: "@quartz-community/comments"
-    enabled: false
+    enabled: true
     options:
       provider: giscus
-      options: {}
+      options:
+        repo: Favilandia/Earthly_Journey
+        repoId: "R_kgDOV0dZEA"
+        category: General
+        categoryId: "DIC_kwDOV0dZEM4DLxhb"
+        mapping: pathname
+        strict: false
+        reactionsEnabled: true
+        inputPosition: top
+        lang: ru
     layout:
       position: afterBody
-      priority: 10
-  - source: "@quartz-community/footer"
+      priority: 10  - source: "@quartz-community/footer"
     enabled: true
     options:
       links:
-        Архив на GitHub: https://github.com/
+        Архив на GitHub: https://github.com/Favilandia/Earthly_Journey
     layout:
       position: footer
       priority: 50
