@@ -9,30 +9,58 @@ title: Земной путь — Исследовательский архив
 <span></span>
 <span></span>
 </a>
-<svg class="ej-astrolabe" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+<main class="ej-content">
+<svg class="ej-astrolabe" viewBox="0 0 960 820" fill="none" xmlns="http://www.w3.org/2000/svg">
 <defs>
-<radialGradient id="goldFade" cx="50%" cy="45%" r="50%">
-<stop offset="0%" stop-color="#f5d593" stop-opacity="0.75"/>
-<stop offset="55%" stop-color="#b89968" stop-opacity="0.28"/>
+<radialGradient id="ejRingMain" cx="50%" cy="42%" r="52%">
+<stop offset="0%" stop-color="#f7dca0" stop-opacity="0.95"/>
+<stop offset="55%" stop-color="#c9a263" stop-opacity="0.45"/>
+<stop offset="100%" stop-color="#8c6d3b" stop-opacity="0.08"/>
+</radialGradient>
+<radialGradient id="ejRingSoft" cx="50%" cy="45%" r="50%">
+<stop offset="0%" stop-color="#f5d593" stop-opacity="0.6"/>
+<stop offset="65%" stop-color="#b89968" stop-opacity="0.22"/>
 <stop offset="100%" stop-color="#b89968" stop-opacity="0"/>
 </radialGradient>
+<linearGradient id="ejBeamGrad" x1="480" y1="-160" x2="480" y2="95" gradientUnits="userSpaceOnUse">
+<stop offset="0%" stop-color="#fff6db" stop-opacity="0.35"/>
+<stop offset="60%" stop-color="#fff0c2" stop-opacity="0.95"/>
+<stop offset="100%" stop-color="#f5d593" stop-opacity="1"/>
+</linearGradient>
+<radialGradient id="ejStarHalo" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#fff3cf" stop-opacity="0.75"/>
+<stop offset="45%" stop-color="#e5bd73" stop-opacity="0.22"/>
+<stop offset="100%" stop-color="#e5bd73" stop-opacity="0"/>
+</radialGradient>
+<filter id="ejGlow" x="-40%" y="-40%" width="180%" height="180%">
+<feGaussianBlur stdDeviation="3.5" result="blur"/>
+<feMerge>
+<feMergeNode in="blur"/>
+<feMergeNode in="SourceGraphic"/>
+</feMerge>
+</filter>
 </defs>
-<circle cx="800" cy="460" r="390" stroke="url(#goldFade)" stroke-width="0.8"/>
-<circle cx="800" cy="460" r="320" stroke="url(#goldFade)" stroke-width="0.5" stroke-dasharray="2 6"/>
-<ellipse cx="800" cy="460" rx="520" ry="275" transform="rotate(-10 800 460)" stroke="url(#goldFade)" stroke-width="0.75"/>
-<circle cx="425" cy="350" r="2.5" fill="#f5d593" opacity="0.85"/>
-<circle cx="410" cy="460" r="2" fill="#b89968" opacity="0.6"/>
-<circle cx="1175" cy="350" r="2.5" fill="#f5d593" opacity="0.85"/>
-<circle cx="1190" cy="460" r="2" fill="#b89968" opacity="0.6"/>
+<line x1="480" y1="-160" x2="480" y2="95" stroke="url(#ejBeamGrad)" stroke-width="1.8"/>
+<circle cx="480" cy="95" r="46" fill="url(#ejStarHalo)"/>
+<circle cx="480" cy="425" r="330" stroke="url(#ejRingMain)" stroke-width="1.15"/>
+<circle cx="480" cy="425" r="296" stroke="url(#ejRingSoft)" stroke-width="0.65" stroke-dasharray="2 6"/>
+<ellipse cx="480" cy="425" rx="395" ry="260" transform="rotate(-24 480 425)" stroke="url(#ejRingSoft)" stroke-width="0.85"/>
+<ellipse cx="480" cy="425" rx="395" ry="260" transform="rotate(24 480 425)" stroke="url(#ejRingSoft)" stroke-width="0.85"/>
+<g transform="translate(480, 95)" filter="url(#ejGlow)">
+<path d="M0 -34 L4 -6 L34 0 L4 6 L0 34 L-4 6 L-34 0 L-4 -6 Z" fill="#fff0c4"/>
+<path d="M0 -18 L3 -3 L18 0 L3 3 L0 18 L-3 3 L-18 0 L-3 -3 Z" transform="rotate(45)" fill="#d4af6a"/>
+</g>
+<g filter="url(#ejGlow)">
+<circle cx="194" cy="260" r="2.6" fill="#f7dca0"/>
+<circle cx="766" cy="260" r="2.6" fill="#f7dca0"/>
+<circle cx="152" cy="390" r="2.2" fill="#e5c17b"/>
+<circle cx="808" cy="390" r="2.2" fill="#e5c17b"/>
+<circle cx="215" cy="565" r="2" fill="#c9a263" opacity="0.85"/>
+<circle cx="745" cy="565" r="2" fill="#c9a263" opacity="0.85"/>
+<path d="M168 318 L170 324 L176 326 L170 328 L168 334 L166 328 L160 326 L166 324 Z" fill="#f7dca0"/>
+<path d="M792 318 L794 324 L800 326 L794 328 L792 334 L790 328 L784 326 L790 324 Z" fill="#f7dca0"/>
+</g>
 </svg>
-<main class="ej-content">
-<div class="ej-crown">
-<div class="ej-beam"></div>
-<svg class="ej-top-star" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M34 0 L38 28 L68 34 L38 40 L34 68 L30 40 L0 34 L30 28 Z" fill="#f5d593"/>
-<path d="M34 14 L36.5 31.5 L54 34 L36.5 36.5 L34 54 L31.5 36.5 L14 34 L31.5 31.5 Z" transform="rotate(45 34 34)" fill="#b89968"/>
-</svg>
-</div>
 <div class="ej-title-wrap">
 <span class="ej-line"></span>
 <h1 class="ej-title">Земной путь</h1>

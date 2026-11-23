@@ -24,7 +24,6 @@ body::after {
   content: "";
   position: fixed;
   inset: 0;
-  /* Затемнение для читаемости текста в подпапках и статьях */
   background: radial-gradient(circle at 50% 30%, rgba(5, 7, 13, 0.58) 0%, rgba(5, 7, 13, 0.86) 70%, #05070d 100%);
   z-index: -1;
   pointer-events: none;
@@ -179,43 +178,29 @@ body:not([data-slug="index"]):not([data-slug="sections"]) {
   box-sizing: border-box;
 }
 
-.ej-astrolabe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
 .ej-content {
   position: relative;
   z-index: 2;
   max-width: 720px;
+  width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 155px;
 }
 
-.ej-crown {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 0.9rem;
-}
-
-.ej-beam {
-  width: 1.5px;
-  height: 95px;
-  background: linear-gradient(180deg, rgba(255, 244, 212, 0.95) 0%, rgba(212, 175, 106, 0.25) 100%);
-}
-
-.ej-top-star {
-  width: 48px;
-  height: 48px;
-  margin-top: -10px;
-  filter: drop-shadow(0 0 12px rgba(245, 213, 147, 0.55));
+.ej-astrolabe {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 960px;
+  height: 820px;
+  max-width: none;
+  overflow: visible;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .ej-title-wrap {
@@ -313,6 +298,10 @@ body:not([data-slug="index"]):not([data-slug="sections"]) {
   justify-content: space-between;
   cursor: pointer;
   opacity: 0.8;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  padding: 0 !important;
   transition: opacity 0.2s;
 }
 
@@ -377,7 +366,6 @@ body:not([data-slug="index"]):not([data-slug="sections"]) {
   background: rgba(10, 14, 24, 0.74);
   backdrop-filter: blur(10px);
   text-decoration: none !important;
-  transition: all 0.25s ease;
 }
 
 .ej-card:hover {
@@ -438,24 +426,7 @@ body:not([data-slug="index"]):not([data-slug="sections"]) {
   border-radius: 3px;
 }
 
-@media (max-width: 720px) {
-  .ej-grid {
-    grid-template-columns: 1fr;
-  }
-  .ej-text br {
-    display: none;
-  }
-  .ej-line {
-    width: 30px;
-  }
-  .ej-beam {
-    height: 60px;
-  }
-  body:not([data-slug="index"]):not([data-slug="sections"]) .center {
-    padding: 1.2rem !important;
-  }
-}
-/* === Плавное появление страниц при переходах === */
+/* 5. Плавное появление страниц и анимации карточек */
 @keyframes ejFadeIn {
   from {
     opacity: 0;
@@ -479,4 +450,27 @@ body:not([data-slug="index"]):not([data-slug="sections"]) .center {
               border-color 0.3s ease,
               background-color 0.3s ease,
               box-shadow 0.3s ease !important;
+}
+
+/* 6. Адаптация под мобильные экраны */
+@media (max-width: 720px) {
+  .ej-grid {
+    grid-template-columns: 1fr;
+  }
+  .ej-text br {
+    display: none;
+  }
+  .ej-line {
+    width: 30px;
+  }
+  .ej-astrolabe {
+    width: 680px;
+    height: 680px;
+  }
+  .ej-content {
+    padding-top: 120px;
+  }
+  body:not([data-slug="index"]):not([data-slug="sections"]) .center {
+    padding: 1.2rem !important;
+  }
 }
