@@ -198,7 +198,8 @@ plugins:
         lang: ru
     layout:
       position: afterBody
-      priority: 10  - source: "@quartz-community/footer"
+      priority: 10
+  - source: "@quartz-community/footer"
     enabled: true
     options:
       links:
