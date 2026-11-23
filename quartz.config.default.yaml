@@ -270,6 +270,7 @@ layout:
     folder:
       exclude:
         - reader-mode
+        - comments
       positions:
         right: []
     tag:

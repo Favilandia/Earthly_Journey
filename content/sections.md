@@ -1,5 +1,6 @@
 ---
 title: Разделы архива — Земной путь
+unlisted: true
 ---
 
 <div class="ej-hero ej-sections-page">
